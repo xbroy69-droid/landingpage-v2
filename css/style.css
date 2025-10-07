@@ -1,20 +1,22 @@
-/* Reset */
+/* ==== RESET DASAR ==== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   color: #333;
-  background: #f9fafb;
+  background: #fff;
 }
 
-/* Navbar */
+/* ==== NAVBAR ==== */
 .navbar {
-  background: linear-gradient(to right, #2563eb, #9333ea);
-  padding: 15px 0;
+  background: linear-gradient(to right, #000, #1900ff);
+  padding: 12px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -29,17 +31,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 20px;
+  white-space: nowrap;
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -52,25 +69,34 @@ body {
   color: #fbbf24;
 }
 
-.btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
+/* ==== BUTTON ==== */
 .btn-orange {
-  background: #f97316;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: orange;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+  gap: 8px;
 }
 
 .btn-orange:hover {
-  background: #ea580c;
+  background: darkorange;
 }
 
-/* Hero */
+.btn-orange img.icon-cart {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* ==== HERO ==== */
 .hero {
-  background: linear-gradient(to right, #2563eb, #9333ea);
+  background: linear-gradient(to right, #000, #1900ff);
   color: white;
   padding: 120px 20px 80px;
   margin-top: 60px;
@@ -83,6 +109,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .hero-text h2 {
@@ -96,29 +124,61 @@ body {
 }
 
 .hero-img img {
-  max-width: 350px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
-/* Services */
+/* ==== ABOUT ==== */
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #ff0303, #0414f5);
+  color: #fff;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1 1 100%;
+  font-size: 15px;
+}
+
+.about-image img {
+  max-width: 220px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* ==== SERVICES ==== */
 .services {
   padding: 80px 20px;
-  background: white;
+  background: linear-gradient(to right, #b8b3b3, #1900ff);
   text-align: center;
 }
 
 .section-title {
   font-size: 28px;
   margin-bottom: 40px;
+  color: #ffffff;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
 .card {
-  background: #f9fafb;
+  background: #fff;
   border-radius: 12px;
   padding: 30px 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -131,13 +191,13 @@ body {
 }
 
 .card img {
-  width: 50px;
-  margin-bottom: 15px;
+  width: 60px;
+  margin-bottom: 10px;
 }
 
-/* CTA */
+/* ==== CTA ==== */
 .cta {
-  background: #f3f4f6;
+  background: #5a5c5f;
   text-align: center;
   padding: 60px 20px;
 }
@@ -145,75 +205,89 @@ body {
 .cta h3 {
   font-size: 24px;
   margin-bottom: 15px;
+  color: #fff;
 }
 
 .cta p {
   margin-bottom: 20px;
-  color: #555;
-}
-.wa-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: wa-float 2.5s ease-in-out infinite;
-    transition: transform 0.2s ease;
-}
-.wa-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 50px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: wa-float 2.5s ease-in-out infinite;
-    transition: transform 0.2s ease;
+  color: #fff;
 }
 
+/* ==== WHATSAPP BUTTON ==== */
+.wa-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: wa-float 2.5s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
 
 .wa-button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .wa-icon {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .wa-text {
-    font-size: 12px;
-    font-weight: bold;
-    color: #25D366;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Animasi melayang */
 @keyframes wa-float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0px); }
-}
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Jarak antara logo dan teks */
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
-.logo-img {
-    height: 40px; /* Tinggi logo, bisa disesuaikan */
-    width: auto;
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .logo-img { height: 28px; }
+  .logo { font-size: 16px; }
+
+  .hero-text h2 { font-size: 26px; }
+  .hero-text p { font-size: 15px; }
+
+  .about h2 { font-size: 22px; }
+  .about p { font-size: 14px; }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media (max-width: 480px) {
+  .hero { padding: 100px 10px 60px; }
+  .hero-text h2 { font-size: 20px; }
+  .hero-text p { font-size: 13px; }
+
+  .about h2 { font-size: 18px; }
+  .about p { font-size: 13px; }
+
+  .logo-img { height: 25px; }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about-image img {
+    max-width: 180px;
+  }
+}
+
